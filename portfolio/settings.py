@@ -95,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'karanpatil',
         'USER': 'codepat_db',
-        'PASSWORD': 'Pentonic!.6',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -167,17 +167,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'karan@codepat.in'
-# EMAIL_HOST_PASSWORD = 'Pentonic!.6'
-# EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST_PASSWORD = 'gibbrishpassword'
 EMAIL_PORT = 587
 
 
@@ -187,8 +181,8 @@ EMAIL_PORT = 587
 # SOCIALACCOUNT_PROVIDERS = {
 #     'google': {
 #         'APP': {
-#             'client_id': '213400679902-fjsbjcv0gq3jcm7tqrh3e3rkrnjpnkj2.apps.googleusercontent.com',
-#             'secret': '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',
+#             'client_id': 'id',
+#             'secret': 'secretapikey',
 #             'key': ''
 #         },
 #         'SCOPE': [
