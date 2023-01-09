@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style.css' %} ">
+<link rel="stylesheet" href="{% static 'css/mobile-style.css' %} ">
+{% endblock style %}
+
+{% block content %}
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h6>TUTOR: KARAN PATIL</h6>
+                <h1>CODEPAT LEARNING:Maths for Class 12</h1>
+                <p>Learn mathematics from a completely different perspective. You will fall in love with the beauty of
+                    maths. Learn with the help of new gen technology and eternal curiosity. Online Maths classes for
+                    12th State Board Exam. See below for more features.</p>
+                <button class="btn btn-light px-5 py-2"> <a class="text-dark text-decoration-none"
+                        href="{% url 'pages:checkout' %}"> Join Now ₹699
+                        for full course</a></button>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+
+
+<main>
+
+
+    <!-- section2 -->
+    <section class="section-2 container-fluid p-0">
+        <div class="cover">
+            <div class="container text-center">
+                <h1>Some Features That make us Unique</h1>
+               <p>We believe in delivering excellence. </p>
+            </div>
+        </div>
+        <div class="container-fluid text-center">
+            <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+                <div class="rect">
+                    <h1>Online</h1>
+                    <p>Learn at your Place. LIVE on Gmeet!</p>
+                </div>
+                <div class="rect">
+                    <h1>100%</h1>
+                    <p>Refund:If scores don't improve.</p>
+                </div>
+                <div class="rect">
+                    <h1>Class 12</h1>
+                    <p>Improve your score by 15% to 25%</p>
+                </div>
+                <div class="rect">
+                    <h1>3 Days Trial</h1>
+                    <p>Cancel if you don't get value.</p>
+                </div>
+            </div>
+        </div>
+        <div class="purchase text-center p-2">
+            <h1>purchase however you want</h1>
+            <p>You can choose to pay monthly or one time payment for the complete course. Offer is only valid for the
+                one time payment option.</p>
+            <div class="cards">
+                <div class="d-flex flex-row justify-content-center flex-wrap">
+
+                    <!-- first card -->
+                    <div class="card" style="width: 28rem;">
+                        <div class="card-body">
+                            <div class="title">
+                                <h5 class="card-title">Monthly</h5>
+                            </div>
+                            <p class="card-text">Pay for each month as you go. Recurring payment option gives you more
+                                flexibility.</p>
+                            <div class="pricing">
+                                <h2 class="text-decoration-line-through">₹399</h2>
+                                <h1>₹299 <small class="text-muted fs-5">/month</small> </h1>
+                                <a class="btn btn-dark px-5 py-2 mb-5" href="{% url 'pages:checkout-monthly'%}">Enroll
+                                    Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- second card -->
+                    <div class="card" style="width: 28rem;">
+                        <h3><span class="badge text-bg-danger mt-3">Recommended</span></h3>
+                        <div class="card-body">
+                            <div class="title">
+                                <h5 class="card-title">Complete Course</h5>
+                            </div>
+                            <p class="card-text">A great opportunity for you to take a high-worth course at this
+                                affordable fees. Grab your chance now!</p>
+                            <div class="pricing">
+                                <h2 class="text-decoration-line-through">₹999</h2>
+                                <h1>₹699 <small class="text-muted fs-5">One Time Purchase</small> </h1>
+                                <a class="btn btn-dark px-5 py-2 mb-5" href="{% url 'pages:checkout'%}">Enroll
+                                    Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- pricing cards end -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+    <section class="section-1">
+        <div class="container text-ceter">
+            <div class="row">
+                <div class="col-md-6 not-mobile">
+                    <div class="pray">
+                        <img src="https://images.pexels.com/photos/5412361/pexels-photo-5412361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="panel text-left">
+                        <h1>Mr. KARAN PATIL</h1>
+                        <p class="pt4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, nihil
+                            doloribus quia, voluptas, amet tenetur tempore suscipit esse adipisci hic eos temporibus
+                            optio aspernatur velit. Inventore cumque sed ullam atque.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel illum exercitationem
+                            cupiditate, laudantium soluta at consequatur pariatur illo molestias ea debitis,
+                            accusantium deserunt eaque rem temporibus. Id, fugiat voluptatem quibusdam tenetur
+                            excepturi culpa quisquam quasi nam adipisci odit voluptate. Aspernatur laudantium ullam
+                            mollitia odit sunt amet, aut nesciunt explicabo totam vitae ipsum, temporibus saepe?
+                            Provident eligendi excepturi ut recusandae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="section-3 container-fluid p-0">
+        <div class="container text-center pt-4">
+            <h1 class="text-dark">Quotes</h1>
+            <p class="text-secondary">Some things are said for the sake of history.
+            </p>
+        </div>
+        <div class="team row">
+            <div class="col-md-4 col-12 text-center">
+
+                <!-- Quote cards -->
+                <div class="card">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Edsger W. Dijkstra</h3>
+                        <p class="text-black-50">Dutch systems scientist</p>
+                        <p class="card-text">There should be no such thing as boring mathematics.</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <!-- Carousel Start -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <!-- Card 2 carousel 1 -->
+                            <div class="card  shadow-lg">
+                                <div class="card-body">
+                                    <h3 class="card-title">Albert Einstein</h3>
+                                    <p class="text-black-50">German Physicist</p>
+                                    <p class="card-text">As far as the laws of mathematics refer to reality, they are
+                                        not certain, and as far as they are certain, they do not refer to reality.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card 3 carousel 2 -->
+                        <div class="carousel-item text-center">
+                            <div class="card  shadow-lg">
+                                <div class="card-body">
+                                    <h3 class="card-title">Shakuntala Devi</h3>
+                                    <p class="text-black-50">Indian writer and mental calculator</p>
+                                    <p class="card-text">Without mathematics, there’s nothing you can do. Everything
+                                        around you is mathematics. Everything around you is numbers.</p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Carousel End -->
+            </div>
+
+            <div class="col-md-4 col-12">
+                <!-- Card 4 -->
+                <div class="card text-center">
+
+                    <div class="card-body">
+                        <h3 class="card-title">John von Neumann</h3>
+                        <p class="text-black-50">Hungarian-American mathematician</p>
+                        <p class="card-text">If people do not believe that mathematics is simple, it is only because
+                            they do not realize how complicated life is.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+{% endblock content %}

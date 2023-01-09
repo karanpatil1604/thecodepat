@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container-fluid p-0 cleared">
+    <!-- Carousel start  -->
+    <div id="carouselExampleCaptions" class="carousel slide" style="height: 70vh;" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    class="d-block w-100 img-fluid image" style="height: 70vh;" alt="...">
+                <div class="carousel-caption d-md-block caption1">
+                    <h3>Computer Programming</h3>
+                    <h5>The best way to talk to dumb computers and make them smart.</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/free-vector/math-science-concept-with-school-lesson-items-retro-cartoon-style_1284-8084.jpg?size=338&ext=jpg"
+                    class="d-block w-100 img-fluid image" style="height: 70vh;" alt="...">
+                <div class="carousel-caption d-md-block caption2">
+                    <h3>Mathematics</h3>
+                    <h5>Build your fundamentals strong.</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    class="d-block w-100 image" style="height: 70vh;" alt="...">
+                <div class="carousel-caption d-md-block caption3">
+                    <h3>Build Web-apps</h3>
+                    <h5>Let's create some awesome products out of our knowledge.</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Carousel End -->
+
+
+
+
+
+    <!-- Card Items start -->
+    <div class="container-fluid p-4 mt-3">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card shadow">
+                    <img src="https://img.freepik.com/free-vector/maths-chalkboard_23-2148178219.jpg?size=626&ext=jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn Mathematics</h5>
+                        <p class="card-text">Ace in mathematics with this course. Designed specially for state board
+                            exams of 10+2 levels. Guaranteed score improvement.</p>
+                        <a href="{% url 'pages:courses' %}" class="btn btn-primary">Know more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow">
+                    <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn Web Development</h5>
+                        <p class="card-text">Build real life projects using <strong>Django</strong>. Learn Frontend
+                            framework such as <strong>Bootstrap</strong> and <strong>reactjs</strong>.</p>
+                        <a href="{% url 'pages:coding' %}" class="btn btn-primary">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<!-- Card Items end -->
+{% endblock content %}

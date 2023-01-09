@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<div class="courses">
+    <div class="container mt-5 mb-5">
+        <div class="row text-center m-3">
+            <div class="card" style="width: 24rem;">
+                        <h3><span class="badge text-bg-danger mt-3">Recommended</span></h3>
+                        <div class="card-body">
+                            <div class="title">
+                                <h5 class="card-title">Complete Course</h5>
+                            </div>
+                            <p class="card-text">A great opportunity for you to take a high-worth course at this
+                                affordable fees. Grab your chance now!</p>
+                            <div class="pricing">
+                                <h2 class="text-decoration-line-through">₹999</h2>
+                                <h1>₹699 <small class="text-muted fs-5">One Time Purchase</small> </h1>
+                                <small class="text-muted fs-6">+₹26 GST+charges</small>
+                                
+                                <form action="success" method="POST">
+                    {% csrf_token %}
+                    <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_live_Wk8Xsfot2Nw2zA"
+                        data-amount="72500" data-currency="INR" data-order_id="{{payment.id}}"
+                        data-buttontext="Pay and Enroll" data-name="Karan Patil"
+                        data-description="Online Maths Classes Fee" data-image="https://example.com/your_logo.jpg"
+                        data-prefill.name="abc xyz" data-prefill.email=""
+                        data-theme.color="#F37254"></script>
+                </form></div>
+
+                        </div>
+                    </div>
+
+
+                
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+{% endblock scripts %}

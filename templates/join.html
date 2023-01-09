@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="content-section courses mb-4">
+    <div class="row text-center">
+        <h1>We are starting soon. Contact us for more!</h1>
+    </div>
+    <div class="row p-4 m-4">
+        <div class="col ">
+            <h1 class="text-center">Contact form</h1>
+            <div class="form-group">
+                <p class="lead">Fill out this form and we will get back to you.</p>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <div class="form-group">
+                        <button type="submit" value="save" class="btn btn-outline-info">Join Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

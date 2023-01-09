@@ -1,0 +1,153 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Karan Patil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,700&family=Patua+One&family=Rubik&family=Sniglet&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+    {% block style %}
+
+    {% endblock style %}
+    <link rel="stylesheet" href="/home/veah6juaasmp/thecodepat/staticfiles/css/main.css">
+    <link rel="stylesheet" href="/home/veah6juaasmp/thecodepat/staticfiles/css/style.css">
+    <link rel="stylesheet" href="/home/veah6juaasmp/thecodepat/staticfiles/css/mobile-style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/mobile-style.css' %} ">
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top nav-bg">
+        <div class="container-fluid">
+            <div class="mr-4">
+                <a class="logo" href="{% url 'pages:home' %}"><i class="fa-solid fa-code"></i> CodePat</a>
+
+            </div>
+            {% if user.is_authenticated %}
+            <p class="d-inline d-md-none text-light nav-link navli pt-2">Hi {{ user.username }}!</p>
+            {% endif %}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link  navli" aria-current="page" href="{% url 'pages:home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navli" aria-current="page" href="{% url 'pages:about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navli" aria-current="page" href="{% url 'pages:courses' %}">Courses</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <span><a class="nav-link navli" href="{% url 'accounts:logout' %}">Logout</a></span>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link navli" aria-current="page" href="{% url 'accounts:login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navli" aria-current="page" href="{% url 'accounts:signup' %}">Sign Up</a>
+                    </li>
+
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    {% if messages %}
+    {% for message in messages %}
+
+
+
+    <div class="alert alert-{{ message.tags }} courses" style=" z-index: 5;">
+        {{message}}
+    </div>
+    {% endfor %}
+
+    {% endif %}
+    {% block content %}
+
+    {% endblock content %}
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row text-left">
+                <div class="col-md-5">
+                    <h1 class="text-light">About</h1>
+                    <p class="text-muted">A self taught Programmer currently pursuing B.S Degree in Data Science from
+                        IIT Madras. <a href="{% url 'pages:about' %}">Know more.</a></p>
+                    <p class="pt-4 text-muted">
+                        Copyright &copy;2022 All rights reserved | <span>Karan Patil.</span>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <h4 class="text-light">Send Me</h4>
+                    <p class="text-muted">Contact us so we can reach you.</p>
+                    <div class="row p-3">
+                        <div class="col-md-5 text-light fw-bold">+91 8329739071</div>
+                        <div class="col-md-5 text-light fst-italic">karanpatil1604@gmail.com</div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h4 class="text-light">Follow Us</h4>
+                    <p class="text-muted">Let us be social</p>
+                    <div class=" column text-right">
+                        <a href="https://www.facebook.com/profile.php?id=100036282139209" target="_blank"
+                            class="px-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/karan.patil11/" target="_blank" class="px-2"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/KaranPa10882433" target="_blank" class="px-2"><i
+                                class="fab fa-twitter"></i></a>
+
+                    </div>
+                    <div class="pt-2 mt-2">
+                         <a href="https://merchant.razorpay.com/policy/KbIDD2pQbm2aBe/privacy">Privacy</a>
+    <a href="https://merchant.razorpay.com/policy/KbIDD2pQbm2aBe/terms">terms</a>
+    <a href="https://merchant.razorpay.com/policy/KbIDD2pQbm2aBe/refund">refund</a>
+    <a href="https://merchant.razorpay.com/policy/KbIDD2pQbm2aBe/shipping">shipping</a>
+    <a href="https://merchant.razorpay.com/policy/KbIDD2pQbm2aBe/contact_us">contact_us</a>
+
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+
+    <!-- scripts -->
+    <script src="https://kit.fontawesome.com/c68135ad63.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <!-- scripts end -->
+
+
+
+</body>
+
+</html>

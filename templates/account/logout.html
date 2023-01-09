@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags %}
+
+
+{% block content%}
+
+<div class="courses container-fluid mb-5 pb-3 mt-3">
+    <div class="container d-flex flex-column">
+        <h2>Are you sure you want to log out?</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy}}
+            <button type="submit" class="btn btn-danger">Log out</button>
+        </form>
+    </div>
+
+</div>
+{% endblock content %}
